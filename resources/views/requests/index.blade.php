@@ -7,9 +7,14 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between my-2">
         <h1 class="h3 text-gray-800">@if (auth()->user()->userType == 1) Your Submitted @else All @endif Requests</h1>
-        <a href="{{ route('requests.create') }}" class="btn btn-sm btn-primary">
-            <i class="fas fa-plus"></i> Add New
-        </a>
+        <div>
+            <a href="{{ route('requests.create') }}" class="btn btn-sm btn-primary">
+                <i class="fas fa-plus"></i> Add New
+            </a>
+            <a href="{{ route('locations.create') }}" class="btn btn-sm btn-primary">
+                <i class="fas fa-plus"></i> Add Office Location
+            </a>
+        </div>
     </div>
     <div class="card shadow mb-4">
         <div class="card-body">
